@@ -1,0 +1,48 @@
+\documentclass[fontsize=11pt,numbers=endperiod]{scrartcl}
+
+\usepackage{fullpage}
+
+\PassOptionsToPackage{e}{esvect}
+\PassOptionsToPackage{footheight=16pt}{typearea}
+\PassOptionsToPackage{plainfootsepline=on,headsepline=0.75pt,footsepline=0.75pt}{scrlayer-scrpage}
+
+\include{styles}
+
+%% ==== Header / footer ===
+%\rohead[]{\raisebox{0.15cm}{{ \normalfont Name:} \line(1,0){150}}}
+%\rehead[{\large \normalfont Name:}]{{\large \normalfont Name:}}
+%\setkomafont{pageheadfoot}{\normalfont\itshape}
+\lohead[]{Problem of the Week}
+\rohead[]{Tin Lam}
+\cfoot[\vbox{\vspace{0.15cm}\pagemark}]{\vbox{\vspace{0.15cm}\pagemark}}
+\pagestyle{scrheadings}
+
+%% ==== Sectioning ===
+%\setkomafont{disposition}{\normalfont}
+\addtokomafont{section}{\centering\scshape\large}
+\renewcommand*{\thesection}{\roman{section}}
+
+%\makeatletter
+% \renewcommand\section{\@startsection {section}{1}{\z@}%
+%     {-0.5ex \@plus -1ex \@minus -.2ex}%
+%     {0.5ex \@plus -.2ex}%
+%    {\bfseries\large}}
+% \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+%     {-0.5ex \@plus -1ex \@minus -.2ex}%
+%     {0.5ex \@plus -.2ex}%
+%    {\bfseries}}
+%\makeatother
+
+%\include{titleinfo}
+%% === Title
+
+\begin{document}
+%------ Begin content here -----
+\maketitle
+\thispagestyle{plain.scrheadings}
+%\begin{multicols}{2}
+
+
+%\end{multicols}
+%------ End document -----
+\end{document}
