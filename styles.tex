@@ -36,7 +36,7 @@
   , frame=tb
   }
   
-\usepackage[b]{esvect}
+\usepackage[e]{esvect}
 \usepackage[makeroom]{cancel}
 
 %=== loading symbols ===
@@ -129,6 +129,7 @@
 \newtheorem{theorem}{Theorem}
 \newframedtheorem{frtheorem}[theorem]{Theorem}
 \newtheorem{conj}{Conjecture}
+
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
@@ -138,6 +139,7 @@
 \theorembodyfont{\slshape}
 \theoremseparator{:}
 \theorempostskip{0cm}
+
 \newtheorem{claim}[theorem]{Claim}
 \newframedtheorem{frclaim}[theorem]{Claim}
 
@@ -163,13 +165,18 @@
 %\theoremheaderfont{\normalfont\bfseries\color{BrickRed}}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
+\theoremstyle{plain}
 \theoremsymbol{} 
 \theoremseparator{:}
-\newtheorem{remarkn}{Remark}
+\newtheorem{rmk*}{Remark}
 
 \theoremheaderfont{\normalfont\bfseries}
 \theorembodyfont{\slshape}
-\newtheorem{claimn}{Claim}
+\theoremstyle{nonumberplain}
+\newtheorem{clm*}{Claim}
+\theorembodyfont{\itshape}
+\newtheorem{lem*}{Lemma}
+
 
 \newcommand{\NP}{\textsc{np\ }}
 \newcommand{\iid}{\textsc{iid\ }}
@@ -299,8 +306,8 @@
 \DeclareMathOperator{\Norm}{\ensuremath{\mathsf{Norm}}}
 \DeclareMathOperator{\Bin}{\ensuremath{\mathsf{Bin}}}
 \DeclareMathOperator{\Poi}{\ensuremath{\mathsf{Poi}}}
-\DeclareMathOperator{\Unif}{\ensuremath{\mathsf{Unif}}}
 \DeclareMathOperator{\Geo}{\ensuremath{\mathsf{Geo}}}
+\DeclareMathOperator{\Unif}{\ensuremath{\mathsf{Unif}}}
 
 \newcommand{\prd}[3][0]{#2\angbr[#1]{#3}} 
 
@@ -340,7 +347,7 @@
 		\hbox to \hsize{#1 \hfil #2} \vskip 0.075in 
 		\hbox to \hsize{#3 \hfil #4}
 	}}}
-	\raisebox{-5pt}[0pt][0pt]{\rule{\linewidth}{0.25pt}}
+	\raisebox{-5pt}[0pt][0pt]{\rule{\linewidth}{0.75pt}}
 	}
 	\end{center} 
 	\vspace{-0.2in} 
@@ -352,8 +359,8 @@
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
-\newcommand{\soln}[1]{{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{Solution:}}{{Solution} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\prob}[1]{{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{\textit{Problem:}}{\textit{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\soln}[1]{{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{\textit{Solution:}}}{{\textit{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
 \newcommand{\isum}[1]{\sum_{#1}^\infty}
