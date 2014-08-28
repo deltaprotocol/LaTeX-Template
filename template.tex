@@ -4,7 +4,7 @@
 
 \PassOptionsToPackage{e}{esvect}
 \PassOptionsToPackage{footheight=16pt}{typearea}
-\PassOptionsToPackage{plainfootsepline=on,headsepline=0.75pt,footsepline=0.75pt}{scrlayer-scrpage}
+\PassOptionsToPackage{plainfootsepline=off,headsepline=1pt,footsepline=0pt}{scrlayer-scrpage}
 
 \include{styles}
 
@@ -33,12 +33,15 @@
 %    {\bfseries}}
 %\makeatother
 
+%%%% === Title info
 %\include{titleinfo}
-%% === Title
+
+%%%% === Turn everything into displaystyle
+%\everymath{\displaystyle}
 
 \begin{document}
 %------ Begin content here -----
-\maketitle
+%\maketitle
 \thispagestyle{plain.scrheadings}
 %\begin{multicols}{2}
 
