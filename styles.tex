@@ -53,7 +53,7 @@
 \usepackage{mathtools}
 \usepackage{tikz, units}
 \usepackage{yhmath}
-\usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots}
+\usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
 
 \addtokomafont{disposition}{\rmfamily}
@@ -359,8 +359,8 @@
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{\textit{Problem:}}{\textit{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
-\newcommand{\soln}[1]{{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{\textit{Solution:}}}{{\textit{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\prob}[1]{{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\soln}[1]{{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
 \newcommand{\isum}[1]{\sum_{#1}^\infty}
