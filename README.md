@@ -5,7 +5,8 @@ This is a LaTeX template and styles import file I use for most document typesett
 This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
 if you want to take use of this.  
 
-* 2014/09/11 Added inverse hypberbolic (\arccosh, \arcsinh, etc.) ops.
+* 2014/09/15 Corrected the hyberbolic naming convention (remove 'c'); added dilation op (\dil)
+* 2014/09/11 Added inverse hyberbolic (\arccosh, \arcsinh, etc.) ops.
 * 2014/09/10 Added inverse macro (\iv) and negative space macro (\w).
 * 2014/09/04 Fixed the issue of the unnumbered Rmk env.
 * 2014/09/03 b) Added calc tikz library.
