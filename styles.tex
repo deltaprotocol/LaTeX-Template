@@ -3,19 +3,14 @@
 %% ====================================================================
 
 \usepackage[usenames,dvipsnames]{xcolor}
-%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.25pt}
 
-%\usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
+\usepackage[margin=1in]{geometry}
 
-\usepackage{url}
-\usepackage{interval}
-\usepackage{framed,quoting}
-
-\usepackage{empheq}
-\usepackage{algorithm}
+\usepackage{url,interval}
+\usepackage{framed,quoting, empheq, algorithm, lastpage}
 
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
@@ -40,24 +35,18 @@
 \usepackage[makeroom]{cancel}
 
 %=== loading symbols ===
-\usepackage{bbding}
-\usepackage{bbm}
+\usepackage{bbding, bbm}
 \newcommand{\eins}{\ensuremath{\mathbbm{1}}}
 
 %\usepackage{stmaryrd}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.10}
-\usepackage{upgreek}
-\usepackage{bold-extra, multicol, enumerate, mathrsfs, hyperref}
-\usepackage{amsmath, amsopn, amsfonts, amssymb}
-\usepackage{mathtools}
-\usepackage{tikz, units}
-\usepackage{yhmath}
+\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, hyperref}
+\usepackage{amsmath, amsopn, amsfonts, amssymb, mathtools, tikz, units, yhmath}
 \usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
 
 \addtokomafont{disposition}{\rmfamily}
-
 
 \usepackage{enumitem}
 \setlist[enumerate]{itemsep=2pt, parsep=0pt, topsep=1pt, labelindent=0.1in, leftmargin=* } 
@@ -74,19 +63,10 @@
 \newenvironment{enumC}{\begin{enumerate}}{\end{enumerate}}
 \newenvironment{enumCN}{\begin{enumerate}[label=\arabic*.), ref=\arabic*]}{\end{enumerate}}
 
-%\usepackage[neverdecrease]{paralist}
-%\setlength{\pltopsep}{0.1ex} % space before first item
-%\setlength{\plitemsep}{0.25ex} % space between items
-%\setdefaultenum{(a)}{(i)}{(i)}{(i)}
-%\newenvironment{enumC}{\begin{compactenum}}{\end{compactenum}}
-%\newenvironment{enumCN}{\begin{compactenum}[(1)]}{\end{compactenum}}
-%\newenvironment{enumCR}{\begin{compactenum}[(i)]}{\end{compactenum}}
-%\setdefaultleftmargin{2.5em}{2em}{2em}{1.5em}{1em}{1em}
-
 \setlength{\headheight}{1.25\baselineskip}
-\setlength{\topmargin}{-0.3in}
+%\setlength{\topmargin}{-0.3in}
+%\addtolength{\textheight}{0.55in}
 \setlength{\headsep}{0.5\baselineskip}
-\addtolength{\textheight}{0.55in}
 \setlength{\footskip}{2.5\baselineskip}
 \setlength{\footnotesep}{\baselineskip}
 
@@ -98,21 +78,6 @@
 
 \setlength{\multicolsep}{2.0pt plus 0pt minus 0pt}
 \newenvironment{twocols}[1][]{\begin{multicols}{2}}{\end{multicols}\vspace{-5pt}}
-%\usepackage[compact]{titlesec}
-%\titlespacing{\section}{0pt}{*1.5}{*0}
-%\titlespacing{\subsection}{0pt}{*1.5}{*0}
-%\titlespacing{\subsubsection}{0pt}{*1.5}{*0}
-%\makeatletter
-% \renewcommand\section{\@startsection {section}{1}{\z@}%
-%     {-0.5ex \@plus -1ex \@minus -.2ex}%
-%     {0.5ex \@plus -.2ex}%
-%    {\bfseries\large}}
-% \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
-%     {-0.5ex \@plus -1ex \@minus -.2ex}%
-%     {0.5ex \@plus -.2ex}%
-%    {\bfseries}}
-%\makeatother
-
 
 \newcounter{ctProb}
 \setcounter{ctProb}{0}
