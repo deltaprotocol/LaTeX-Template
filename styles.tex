@@ -9,9 +9,8 @@
 \usepackage{scrlayer-scrpage}
 \usepackage[margin=1in]{geometry}
 
-\usepackage{url,interval,calc}
-\usepackage{framed,quoting, empheq, algorithm, lastpage}
-
+\usepackage{lastpage, hyperref}
+\usepackage{url,interval,calc,framed,quoting,empheq,algorithm}
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
@@ -41,7 +40,7 @@
 %\usepackage{stmaryrd}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.10}
-\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, hyperref}
+\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs}
 \usepackage{amsmath, amsopn, amsfonts, amssymb, mathtools, tikz, units, yhmath}
 \usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
@@ -64,14 +63,12 @@
 \newenvironment{enumCN}{\begin{enumerate}[label=\arabic*.), ref=\arabic*]}{\end{enumerate}}
 
 \setlength{\headheight}{1.25\baselineskip}
-%\setlength{\topmargin}{-0.3in}
-%\addtolength{\textheight}{0.55in}
 \setlength{\headsep}{0.5\baselineskip}
 \setlength{\footskip}{2.5\baselineskip}
 \setlength{\footnotesep}{\baselineskip}
 
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{5pt}
+%\setlength{\parindent}{0cm}
+%\setlength{\parskip}{5pt}
 
 %% === Experimental ===
 \linespread{0.96}
@@ -320,10 +317,10 @@
 	
 \newcommand{\drudhead}[4]{	
 	\begin{center}
-	{\textbf { {\parbox{1\textwidth}{ 
+	{\textbf{\large { {\parbox{1\textwidth}{ 
 		\hbox to \hsize{#1 \hfil #2} \vskip 0.075in 
 		\hbox to \hsize{#3 \hfil #4}
-	}}}
+	}}}}
 	\raisebox{-5pt}[0pt][0pt]{\rule{\linewidth}{0.75pt}}
 	}
 	\end{center} 
@@ -360,7 +357,7 @@
 
 \newlength{\RoundedBoxWidth}
 \newsavebox{\GrayRoundedBox}
-\newenvironment{GrayBox}[1][\dimexpr\textwidth-4.5ex]%
+\newenvironment{graybox}[1][\dimexpr\textwidth-4.5ex]%
    {\setlength{\RoundedBoxWidth}{\dimexpr#1}
     \begin{lrbox}{\GrayRoundedBox}
        \begin{minipage}{\RoundedBoxWidth}}%
