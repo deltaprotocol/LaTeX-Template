@@ -4,6 +4,7 @@
 
 \usepackage[usenames,dvipsnames]{xcolor}
 
+\usepackage{ae}
 \usepackage[T1]{fontenc}
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
@@ -48,9 +49,9 @@
 \addtokomafont{disposition}{\rmfamily}
 
 \usepackage{enumitem}
-\setlist[enumerate]{itemsep=2pt, parsep=0pt, topsep=1pt, labelindent=0.1in, leftmargin=* } 
-\setlist[itemize]{itemsep=2pt, parsep=1pt, topsep=1pt, labelindent=0.1in, leftmargin=* } 
-\setlist[description]{itemsep=2pt, parsep=1pt, topsep=1pt, labelindent=0.1in, leftmargin=*, font=\normalfont\bfseries } 
+\setlist[enumerate]{itemsep=0pt, parsep=0pt, topsep=1pt, labelindent=0.1in, leftmargin=* } 
+\setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=1pt, labelindent=0.1in, leftmargin=* } 
+\setlist[description]{itemsep=0pt, parsep=0pt, topsep=1pt, labelindent=0.1in, leftmargin=*, font=\normalfont\bfseries } 
 \setlist[itemize,1]{}
 \setlist[description,1]{}
 \setlist[enumerate,1]{label=(\emph{\alph*}), ref=\alph*}
@@ -68,10 +69,10 @@
 \setlength{\footnotesep}{\baselineskip}
 
 %\setlength{\parindent}{0cm}
-\setlength{\parskip}{2pt plus2pt minus1pt}
+\setlength{\parskip}{2pt plus0pt minus1pt}
 
 %% === Experimental ===
-\linespread{0.96}
+%\linespread{0.9}
 
 \setlength{\multicolsep}{2.0pt plus 0pt minus 0pt}
 \newenvironment{twocols}[1][]{\begin{multicols}{2}}{\end{multicols}\vspace{-5pt}}

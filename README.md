@@ -5,6 +5,7 @@ This is a LaTeX template and styles import file I use for most document typesett
 This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
 if you want to take use of this.  
 
+* 2014/09/23 Added space to avoid the crunch in parskip
 * 2014/09/21 Updated parskip and noindent for problem environment.
 * 2014/09/20 Updated packages and restore parskip.
 * 2014/09/16 Revised the pages.
