@@ -118,13 +118,6 @@
 \newtheorem{fact}[theorem]{Fact}
 \newtheorem{example}{Example}
 
-\theoremheaderfont{\normalfont\bfseries}
-\theorembodyfont{\upshape} 
-\theoremstyle{nonumberplain}
-\theoremseparator{:} 
-\theoremsymbol{\rule{1ex}{1ex}} 
-\newtheorem{proof}{Proof}
-
 %\theoremheaderfont{\normalfont\bfseries\color{BrickRed}}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
@@ -142,6 +135,19 @@
 \theorembodyfont{\itshape}
 \newtheorem{lem*}{Lemma}
 \newtheorem{thm*}{Theorem}
+
+
+\theoremprework{%
+\setlength\theorempostskipamount{2\parskip}
+}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\upshape} 
+\theoremstyle{nonumberplain}
+\theoremseparator{:} 
+\theoremsymbol{\rule{1ex}{2ex}} 
+\newtheorem{proof}{Proof}
+
+
 
 \newcommand{\NP}{\textsc{np\ }}
 \newcommand{\iid}{\textsc{iid\ }}
