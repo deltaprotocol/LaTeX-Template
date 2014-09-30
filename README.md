@@ -5,9 +5,10 @@ This is a LaTeX template and styles import file I use for most document typesett
 This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
 if you want to take use of this.  
 
+* 2014/09/30 Changed bbm to mathds
 * 2014/09/29 Added wasysym package, removed bbding due to conflict (commented out)
 * 2014/09/26 b) Changed CM font to MathDesgin (experimental)
-* 2014/09/26 a) Added spacing after the proof env.
+* 2014/09/26 a) Added spacing after the proof env
 * 2014/09/23 b) Added complement and cof() op
 * 2014/09/23 a) Added space to avoid the crunch in parskip
 * 2014/09/21 Updated parskip and noindent for problem environment.
