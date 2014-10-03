@@ -12,7 +12,7 @@
 \usepackage[nointegrals]{wasysym}
 %\usepackage{bbding}
 \usepackage{lastpage, hyperref}
-\usepackage{url,interval,calc,framed,quoting,empheq,algorithm}
+\usepackage{url,interval,calc,framed,fancybox,quoting,empheq,algorithm}
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
@@ -366,19 +366,5 @@
 %% ==== Custom macro ===
 \newcommand{\eps}{\varepsilon}
 
-\newlength{\RoundedBoxWidth}
-\newsavebox{\GrayRoundedBox}
-\newenvironment{graybox}[1][\dimexpr\textwidth-4.5ex]%
-   {\setlength{\RoundedBoxWidth}{\dimexpr#1}
-    \begin{lrbox}{\GrayRoundedBox}
-       \begin{minipage}{\RoundedBoxWidth}}%
-   {   \end{minipage}
-    \end{lrbox}
-    \begin{center}
-    \begin{tikzpicture}%
-       \draw node[draw=black,fill=black!10,rounded corners,%
-             inner sep=2ex,text width=\RoundedBoxWidth]%
-             {\usebox{\GrayRoundedBox}};
-    \end{tikzpicture}
-    \end{center}}
+
 
