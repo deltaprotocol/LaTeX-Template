@@ -373,5 +373,12 @@
 %% ==== Custom macro ===
 \newcommand{\eps}{\varepsilon}
 
+%% ==== Arcs
+\DeclareFontEncoding{FMX}{}{}%%%
+\DeclareFontSubstitution{FMX}{futm}{m}{n}%%%
+\DeclareSymbolFont{largesymbols}{FMX}{futm}{m}{n}
+\DeclareMathAccent{\widearc}{\mathord}{largesymbols}{216}
+\newcommand\bigfrown[2][\textstyle]{\ensuremath{%
+  \array[b]{c}\text{\scalebox{2}{$#1\frown$}}\\[-1.3ex]#1#2\endarray}}
 
 
