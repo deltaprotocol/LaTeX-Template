@@ -7,29 +7,21 @@
 \include{styles}
 
 %% ==== Header / footer ===
-%\rohead[]{\raisebox{0.15cm}{{ \normalfont Name:} \line(1,0){150}}}
-%\rehead[{\large \normalfont Name:}]{{\large \normalfont Name:}}
-%\setkomafont{pageheadfoot}{\normalfont\itshape}
+\setkomafont{pageheadfoot}{\normalfont\itshape}
 \lohead[]{Problem of the Week}
 \rohead[]{Tin Lam}
 \cfoot[\vbox{\vspace{0.15cm}\pagemark}]{\vbox{\vspace{0.15cm}\pagemark}}
 \pagestyle{scrheadings}
 
+%% ==== Label ===
+%\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+
 %% ==== Sectioning ===
 %\setkomafont{disposition}{\normalfont}
 \addtokomafont{section}{\centering\scshape\large}
 \renewcommand*{\thesection}{\roman{section}}
-
-%\makeatletter
-% \renewcommand\section{\@startsection {section}{1}{\z@}%
-%     {-0.5ex \@plus -1ex \@minus -.2ex}%
-%     {0.5ex \@plus -.2ex}%
-%    {\bfseries\large}}
-% \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
-%     {-0.5ex \@plus -1ex \@minus -.2ex}%
-%     {0.5ex \@plus -.2ex}%
-%    {\bfseries}}
-%\makeatother
+\titlespacing{\section}{0pt}{0pt}{0cm}
+\titlespacing{\subsection}{0pt}{0pt}{0cm}
 
 %%%% === Turn everything into displaystyle
 %\everymath{\displaystyle}
@@ -39,6 +31,7 @@
 %\maketitle
 \thispagestyle{plain.scrheadings}
 %\begin{multicols}{2}
+
 
 %\end{multicols}
 %------ End document -----

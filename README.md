@@ -5,6 +5,7 @@ This is a LaTeX template and styles import file I use for most document typesett
 This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
 if you want to take use of this.  
 
+* 2014/10/05 Updated sectioning spacing code (added titlesec package, experimental)
 * 2014/10/03 Added fancybox.
 * 2014/09/30 Changed bbm to mathds
 * 2014/09/29 Added wasysym package, removed bbding due to conflict (commented out)

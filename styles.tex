@@ -31,7 +31,24 @@
   , xrightmargin=.2\textwidth
   , frame=tb
   }
-  
+
+%=== section spacing ==
+%\makeatletter
+% \renewcommand{\section}{\@startsection {section}{1}{\z@}%
+%     {-0.1ex \@plus -.5ex \@minus -.2ex}%
+%     {0.1ex \@plus -.5ex}%
+%     {\bfseries\Large}}
+% \renewcommand{\subsection}{\@startsection {subsection}{2}{\z@}%
+%     {-0.1ex \@plus -.5ex \@minus -.2ex}%
+%     {0.1ex \@plus -.2ex}%
+%    {\bfseries}}
+%\makeatother
+
+%%% === TODO: Better handling with KOMA, now generates error
+\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{0pt}{0cm}
+%\titlespacing{\subsection}{0pt}{0pt}{0cm}
+
 \usepackage[e]{esvect}
 \usepackage[makeroom]{cancel}
 
@@ -49,6 +66,14 @@
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
 \usepackage[font=small,labelsep=none]{caption}
 \usepackage{subfig}
+
+%% tikz
+\tikzset{%
+extended line/.style={shorten >=-#1,shorten <=-#1},%
+extended line/.default=.5cm,%
+wpoint/.style={fill=white,draw=black},%
+bpoint/.style={fill=black,draw=black},%
+}
 
 \addtokomafont{disposition}{\rmfamily}
 
@@ -81,11 +106,8 @@
 \setlength{\multicolsep}{2.0pt plus 0pt minus 0pt}
 \newenvironment{twocols}[1][]{\begin{multicols}{2}}{\end{multicols}\vspace{-5pt}}
 
-\newcounter{ctProb}
-\setcounter{ctProb}{0}
-\newcommand{\problem}{%
-\addtocounter{ctProb}{1}%
-\paragraph{{\textsc{Problem \arabic{ctProb}.}}}}
+\newcounter{probCounter}
+\setcounter{probCounter}{0}
 
 \theoremstyle{plain}
 \theoremheaderfont{\normalfont\bfseries}
@@ -93,11 +115,13 @@
 \theoremseparator{:}
 \theorempostskip{0cm}
 
+\newtheorem{ptheorem}{Theorem}[probCounter]
 \newtheorem{theorem}{Theorem}
 \newframedtheorem{frtheorem}[theorem]{Theorem}
 \newtheorem{conj}{Conjecture}
 
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{plemma}{Lemma}[probCounter]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 
@@ -108,6 +132,7 @@
 \theorempostskip{0cm}
 
 \newtheorem{claim}[theorem]{Claim}
+\newtheorem{pclaim}{Claim}[probCounter]
 \newframedtheorem{frclaim}[theorem]{Claim}
 
 \theoremstyle{plain}
@@ -116,7 +141,6 @@
 \theoremseparator{:}
 \theorempostskip{0cm}
 
-\newtheorem{pclaim}{Claim}[ctProb]
 \newtheorem{defn}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{fact}[theorem]{Fact}
@@ -353,7 +377,7 @@
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \addtocounter{probCounter}{1}}
 \newcommand{\soln}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}

@@ -1,26 +1,28 @@
-\documentclass[fontsize=10pt,numbers=endperiod]{scrartcl}
-
-
+\documentclass[letterpaper,fontsize=12pt,numbers=endperiod]{scrartcl}
 
 \PassOptionsToPackage{e}{esvect}
 \PassOptionsToPackage{footheight=16pt}{typearea}
 \PassOptionsToPackage{plainfootsepline=off,headsepline=0.25pt,footsepline=0pt}{scrlayer-scrpage}
-\PassOptionsToPackage{a5paper,margin=0.5in}{geometry}
+\PassOptionsToPackage{margin=0.5in}{geometry}
 
 \include{styles}
-
 
 %% ==== Header / footer ===
 \setkomafont{pageheadfoot}{\normalfont}
 \lohead[]{Problem of the Week}
 \rohead[]{Tin Lam}
-\cfoot[Page \pagemark{} of \pageref{LastPage}]{Page \pagemark{} of \pageref{LastPage}}
+\cfoot[Page \pagemark{}]{Page \pagemark{}}
 \pagestyle{scrheadings}
+
+%% ==== Label ===
+%\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
 
 %% ==== Sectioning ===
 %\setkomafont{disposition}{\normalfont}
 \addtokomafont{section}{\centering\scshape\large}
 \renewcommand*{\thesection}{\roman{section}}
+\titlespacing{\section}{0pt}{0pt}{0cm}
+\titlespacing{\subsection}{0pt}{0pt}{0cm}
 
 %% ==== Turn everything into displaystyle ===
 %\everymath{\displaystyle}
@@ -28,7 +30,8 @@
 \begin{document}
 \thispagestyle{plain.scrheadings}
 %------ Begin content here -----
-\drudhead{$university$}{Tin Lam}{Problem of the Week}{$semester$}
-test
+\drudhead{@university@}{Tin Lam}{Problem of the Week}{@semester@}
+
+Hello world.
 %------ End document -----
 \end{document}
