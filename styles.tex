@@ -65,7 +65,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.10}
 
-\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs}
+\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor}
 \usepackage{amsmath, amsopn, amsfonts, mathtools, tikz, units, yhmath,amssymb}
 \usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
@@ -96,6 +96,8 @@ bpoint/.style={fill=black,draw=black},%
 \newenvironment{enumI}{\begin{itemize}}{\end{itemize}}
 \newenvironment{enumC}{\begin{enumerate}}{\end{enumerate}}
 \newenvironment{enumCN}{\begin{enumerate}[label=\arabic*.), ref=\arabic*]}{\end{enumerate}}
+\newenvironment{enumCR}{\begin{enumerate}[label=(\emph{\roman*}), ref=\arabic*]}{\end{enumerate}}
+
 
 \setlength{\headheight}{1.25\baselineskip}
 \setlength{\headsep}{0.5\baselineskip}
