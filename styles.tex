@@ -66,7 +66,7 @@
 \pgfplotsset{compat=1.10}
 
 \usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor}
-\usepackage{amsmath, amsopn, amsfonts, mathtools, tikz, units, yhmath,amssymb}
+\usepackage{amsmath, amsopn, amsfonts, mathtools, tikz, units, yhmath, amssymb}
 \usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
 \usepackage[font=small,labelsep=none]{caption}
@@ -124,7 +124,6 @@ bpoint/.style={fill=black,draw=black},%
 
 \newtheorem{ptheorem}{Theorem}[probCounter]
 \newtheorem{theorem}{Theorem}
-\newframedtheorem{frtheorem}[theorem]{Theorem}
 \newtheorem{conj}{Conjecture}
 
 \newtheorem{lemma}[theorem]{Lemma}
@@ -140,7 +139,6 @@ bpoint/.style={fill=black,draw=black},%
 
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{pclaim}{Claim}[probCounter]
-\newframedtheorem{frclaim}[theorem]{Claim}
 
 \theoremstyle{plain}
 \theoremheaderfont{\normalfont\bfseries}
@@ -159,17 +157,17 @@ bpoint/.style={fill=black,draw=black},%
 %\theoremstyle{plain}
 \theoremsymbol{} 
 \theoremseparator{:}
-\newtheorem{rmk*}{Remark}
+\newtheorem{rmk}{Remark}
 
 
 \theoremheaderfont{\normalfont\bfseries}
 \theorembodyfont{\slshape}
 \theoremstyle{nonumberplain}
-\newtheorem{clm*}{Claim}
+\newtheorem{clm}{Claim}
 \theoremseparator{:}
 \theorembodyfont{\itshape}
-\newtheorem{lem*}{Lemma}
-\newtheorem{thm*}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{thm}{Theorem}
 
 
 \theoremprework{%
@@ -384,7 +382,7 @@ bpoint/.style={fill=black,draw=black},%
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \addtocounter{probCounter}{1}}
+\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
 \newcommand{\soln}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
@@ -414,4 +412,10 @@ bpoint/.style={fill=black,draw=black},%
 \newcommand\bigfrown[2][\textstyle]{\ensuremath{%
   \array[b]{c}\text{\scalebox{2}{$#1\frown$}}\\[-1.3ex]#1#2\endarray}}
 
-
+\newcommand{\intentblank}{
+\vspace*{\fill}%
+\begin{center}%
+This page is intentionally left blank.%
+\end{center}%
+\vspace{\fill}
+}
