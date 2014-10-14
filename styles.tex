@@ -231,7 +231,7 @@ bpoint/.style={fill=black,draw=black},%
 	\ifcase #1
 		\mathopen{}\left#2 #3 \right#4\mathclose{}
 		\or #2 #3 #4
-		\or \big#2 #3 \bigr#4
+		\or \bigl#2 #3 \bigr#4
 		\or \Bigl#2 #3 \Bigr#4
 		\or \biggl#2 #3 \biggr#4
 		\or \Biggl#2 #3 \Biggr#4
@@ -397,8 +397,7 @@ bpoint/.style={fill=black,draw=black},%
 \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
 \renewcommand{\arraystretch}{1}
 
-\newcommand{\w}{\!\!\!}
-
+\newcommand{\w}{\hspace*{-1.5pt}}
 \newcommand{\unitj}{\ensuremath{\mv{\textbf{\j}}}}
 \newcommand{\uniti}{\ensuremath{\mv{\textbf{\i}}}}
 \newcommand{\unitk}{\ensuremath{\mb{k}}}
