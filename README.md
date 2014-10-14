@@ -5,7 +5,7 @@ This is a LaTeX template and styles import file I use for most document typesett
 This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
 if you want to take use of this.  
 
-* 2014/10/14 Added \w spacing 
+* 2014/10/14 Added \w spacing; Added mathdots package.
 * 2014/10/08 Added Area() call
 * 2014/10/06 Added tensor package
 * 2014/10/05 Updated sectioning spacing code (added titlesec package, experimental)
