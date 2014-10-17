@@ -5,6 +5,8 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 
 \usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%\usepackage{millennial}
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
 \usepackage[margin=1in]{geometry}
@@ -12,7 +14,7 @@
 \usepackage[nointegrals]{wasysym}
 %\usepackage{bbding}
 \usepackage{lastpage, hyperref}
-\usepackage{url,interval,calc,framed,fancybox,quoting,empheq,algorithm}
+\usepackage{url,interval,calc,framed,fancybox,quoting,empheq,algorithm, esint}
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
@@ -397,7 +399,7 @@ bpoint/.style={fill=black,draw=black},%
 \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
 \renewcommand{\arraystretch}{1}
 
-\newcommand{\w}{\hspace*{-1.5pt}}
+\newcommand{\w}{\hspace*{-3pt}}
 \newcommand{\unitj}{\ensuremath{\mv{\textbf{\j}}}}
 \newcommand{\uniti}{\ensuremath{\mv{\textbf{\i}}}}
 \newcommand{\unitk}{\ensuremath{\mb{k}}}
