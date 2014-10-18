@@ -4,7 +4,11 @@
 
 \usepackage[usenames,dvipsnames]{xcolor}
 
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{pdfrender}
+\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.05}
+
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
 \usepackage[margin=1in]{geometry}
@@ -184,9 +188,6 @@ bpoint/.style={fill=black,draw=black},%
 }
 \theoremsymbol{}
 \newtheorem{solution}{Solution}
-
-
-
 
 \newcommand{\NP}{\textsc{np\ }}
 \newcommand{\iid}{\textsc{iid\ }}
@@ -405,8 +406,6 @@ bpoint/.style={fill=black,draw=black},%
 \newcommand{\eps}{\varepsilon}
 
 %% ==== Arcs
-\usepackage{tipa}% http://ctan.org/pkg/{graphicx,tipa}
-
 \newcommand{\arc}[1]{%
   \setbox9=\hbox{\ensuremath{#1}}%
   \ooalign{\raisebox{8pt}{\resizebox{\wd9}{\height}{\ensuremath{\frown}}}\cr\ensuremath{#1}}}

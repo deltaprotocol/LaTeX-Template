@@ -5,6 +5,7 @@ This is a LaTeX template and styles import file I use for most document typesett
 This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
 if you want to take use of this.  
 
+* 2014/10/18 Removed tipa from causing strange error.
 * 2014/10/17 Addes esint and millennial pkg.
 * 2014/10/14 Added \w spacing; Added mathdots package.
 * 2014/10/08 Added Area() call
