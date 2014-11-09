@@ -9,7 +9,8 @@
 %\usepackage{pdfrender}
 %\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.05pt}
 
-\usepackage{amssymb, amsfonts}
+\usepackage{MnSymbol, amsfonts}
+%\usepackage{amssymb, amsfonts}
 
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
@@ -337,8 +338,11 @@ bpoint/.style={fill=black,draw=black},%
 \DeclareMathOperator{\arcsch}{\ensuremath{arcsch}}
 
 %
-\DeclareMathOperator*{\bigtimes}{\raisebox{-1.25ex}{{\tikz [x=3.2ex,y=3.2ex,line width=.25ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}}%
-\DeclareMathOperator*{\dbigtimes}{\raisebox{-0.75ex}{{\tikz [x=2.1ex,y=2.1ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}}%
+\DeclareMathOperator*{\cart}{\raisebox{-0.8ex}{{\tikz [x=2.6ex,y=2.6ex,line width=.25ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}}%
+\DeclareMathOperator*{\dcart}{\raisebox{-0.6ex}{{\tikz [x=2.0ex,y=2.0ex,line width=.175ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}}%
+%%===norm
+%\DeclareMathOperator*{\cart}{\raisebox{-1.25ex}{{\tikz [x=3.2ex,y=3.2ex,line width=.25ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}}%
+%\DeclareMathOperator*{\dcart}{\raisebox{-0.75ex}{{\tikz [x=2.1ex,y=2.1ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}}%
 
 %% Statistics command
 \DeclareMathOperator{\Norm}{\ensuremath{\mathsf{Norm}}}
@@ -431,14 +435,14 @@ This page is intentionally left blank.%
 }
 
 %% == Single letter loading
-\DeclareFontFamily{U}{MnSymbolC}{}
-\DeclareFontShape{U}{MnSymbolC}{m}{n}{
-<-6> MnSymbolC5
-<6-7> MnSymbolC6
-<7-8> MnSymbolC7
-<8-9> MnSymbolC8
-<9-10> MnSymbolC9
-<10-12> MnSymbolC10
-<12-> MnSymbolC12}{}
-\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
-\DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%<-6> MnSymbolC5
+%<6-7> MnSymbolC6
+%<7-8> MnSymbolC7
+%<8-9> MnSymbolC8
+%<9-10> MnSymbolC9
+%<10-12> MnSymbolC10
+%<12-> MnSymbolC12}{}
+%\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
+%\DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
