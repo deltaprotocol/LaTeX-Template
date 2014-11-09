@@ -9,6 +9,8 @@
 %\usepackage{pdfrender}
 %\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.05pt}
 
+\usepackage{amssymb, amsfonts}
+
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
 \usepackage[margin=1in]{geometry}
@@ -75,12 +77,13 @@
 \pgfplotsset{compat=1.10}
 
 \usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor}
-\usepackage{amsmath, amsopn, amsfonts, mathtools, tikz, units, yhmath, amssymb}
+\usepackage{amsmath, amsopn, mathtools, tikz, units, yhmath}
 \usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
 \usepackage[font=small,labelsep=none]{caption}
 \usepackage{subfig}
 \usepackage{mathdots}
+
 %% tikz
 \tikzset{%
 extended line/.style={shorten >=-#1,shorten <=-#1},%
@@ -426,3 +429,16 @@ This page is intentionally left blank.%
 \end{center}%
 \vspace{\fill}
 }
+
+%% == Single letter loading
+\DeclareFontFamily{U}{MnSymbolC}{}
+\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+<-6> MnSymbolC5
+<6-7> MnSymbolC6
+<7-8> MnSymbolC7
+<8-9> MnSymbolC8
+<9-10> MnSymbolC9
+<10-12> MnSymbolC10
+<12-> MnSymbolC12}{}
+\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
+\DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
