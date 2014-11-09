@@ -4,14 +4,9 @@
 
 \usepackage[usenames,dvipsnames]{xcolor}
 
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage{pdfrender}
 %\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.05pt}
-
-\usepackage{MnSymbol, amsfonts}
-%\usepackage{amssymb, amsfonts}
-
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
 \usepackage[margin=1in]{geometry}
@@ -19,12 +14,32 @@
 \usepackage[nointegrals]{wasysym}
 %\usepackage{bbding}
 \usepackage{lastpage, hyperref,textcomp}
-\usepackage{url,interval,calc,framed,fancybox,quoting,empheq,algorithm, esint}
+\usepackage{url,interval,calc,framed,fancybox,quoting,empheq, algorithm, stackrel}
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
 
-\usepackage{stackrel}
+\usepackage{amsfonts, amssymb}
+%usepackage[cmsy]{MnSymbol}
+
+\usepackage[e]{esvect}
+\usepackage[makeroom]{cancel}
+
+%=== loading symbols ===
+\usepackage{dsfont}
+\newcommand{\eins}{\ensuremath{\mathds{1}}}
+
+%\usepackage{stmaryrd}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+
+\usepackage{amsmath, amsopn, mathtools, tikz, units}
+\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor, esint}
+\usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
+\usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
+\usepackage[font=small,labelsep=none]{caption}
+\usepackage{subfig}
+\usepackage{mathdots}
 
 % --- to use mint, you need python 2.6 and pegmatite, 
 % --- install using command: "easy_install Pigments"
@@ -65,25 +80,6 @@
 \usepackage[compact]{titlesec}
 %\titlespacing{\section}{0pt}{0pt}{0cm}
 %\titlespacing{\subsection}{0pt}{0pt}{0cm}
-
-\usepackage[e]{esvect}
-\usepackage[makeroom]{cancel}
-
-%=== loading symbols ===
-\usepackage{dsfont}
-\newcommand{\eins}{\ensuremath{\mathds{1}}}
-
-%\usepackage{stmaryrd}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.10}
-
-\usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor}
-\usepackage{amsmath, amsopn, mathtools, tikz, units, yhmath}
-\usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc}
-\usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
-\usepackage[font=small,labelsep=none]{caption}
-\usepackage{subfig}
-\usepackage{mathdots}
 
 %% tikz
 \tikzset{%
@@ -187,16 +183,17 @@ bpoint/.style={fill=black,draw=black},%
 \theoremprework{%
 \setlength\theorempostskipamount{3\parskip}
 }
-\theoremheaderfont{\normalfont\bfseries}
+\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
-\theoremseparator{.} 
+\theoremseparator{:} 
 \theoremsymbol{\rule{1ex}{2ex}} 
 \newtheorem{proof}{Proof}
 \theoremprework{%
 \setlength\theorempostskipamount{3\parskip}
 }
 \theoremsymbol{}
+\theoremseparator{:} 
 \newtheorem{solution}{Solution}
 
 \newcommand{\NP}{\textsc{np\ }}
@@ -401,8 +398,8 @@ bpoint/.style={fill=black,draw=black},%
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
-\newcommand{\soln}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
+\newcommand{\soln}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{\textsf{Solution:}}}{{\textsf{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
 \newcommand{\isum}[1]{\sum_{#1}^\infty}
@@ -435,14 +432,14 @@ This page is intentionally left blank.%
 }
 
 %% == Single letter loading
-%\DeclareFontFamily{U}{MnSymbolC}{}
-%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
-%<-6> MnSymbolC5
-%<6-7> MnSymbolC6
-%<7-8> MnSymbolC7
-%<8-9> MnSymbolC8
-%<9-10> MnSymbolC9
-%<10-12> MnSymbolC10
-%<12-> MnSymbolC12}{}
-%\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
-%\DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
+\DeclareFontFamily{U}{MnSymbolC}{}
+\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+<-6> MnSymbolC5
+<6-7> MnSymbolC6
+<7-8> MnSymbolC7
+<8-9> MnSymbolC8
+<9-10> MnSymbolC9
+<10-12> MnSymbolC10
+<12-> MnSymbolC12}{}
+\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
+\DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
