@@ -14,7 +14,7 @@
 \usepackage[nointegrals]{wasysym}
 %\usepackage{bbding}
 \usepackage{lastpage, hyperref,textcomp}
-\usepackage{url,interval,calc,framed,fancybox,quoting,empheq, algorithm, stackrel}
+\usepackage{url,interval,calc,framed,fancybox,quoting,empheq, algorithm, stackrel, wrapfig}
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
@@ -443,3 +443,15 @@ This page is intentionally left blank.%
 <12-> MnSymbolC12}{}
 \DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
 \DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
+
+%% code from mathabx.sty and mathabx.dcl
+\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathx}{m}{n}{
+      <5> <6> <7> <8> <9> <10>
+      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
+      mathx10
+      }{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareFontSubstitution{U}{mathx}{m}{n}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+\DeclareMathAccent{\wideparen}{0}{mathx}{"75}
