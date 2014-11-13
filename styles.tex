@@ -12,9 +12,9 @@
 \usepackage[margin=1in]{geometry}
 
 \usepackage[nointegrals]{wasysym}
-%\usepackage{bbding}
+\usepackage{float, wrapfig, picinpar}
 \usepackage{lastpage, hyperref,textcomp}
-\usepackage{url,interval,calc,framed,fancybox,quoting,empheq, algorithm, stackrel, wrapfig}
+\usepackage{url,interval,calc,framed,fancybox,quoting,empheq, algorithm, stackrel}
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
@@ -171,10 +171,10 @@ bpoint/.style={fill=black,draw=black},%
 \newtheorem{hint}{Hint}
 
 \theoremheaderfont{\normalfont\bfseries}
-\theorembodyfont{\slshape}
+\theorembodyfont{\upshape}
+\theoremseparator{:}
 \theoremstyle{nonumberplain}
 \newtheorem{clm}{Claim}
-\theoremseparator{:}
 \theorembodyfont{\itshape}
 \newtheorem{lem}{Lemma}
 \newtheorem{thm}{Theorem}
@@ -183,15 +183,17 @@ bpoint/.style={fill=black,draw=black},%
 \theoremprework{%
 \setlength\theorempostskipamount{3\parskip}
 }
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+\theoremheaderfont{\normalfont\itshape\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
-\theoremseparator{:} 
+\theoremseparator{.} 
 \theoremsymbol{\rule{1ex}{2ex}} 
 \newtheorem{proof}{Proof}
 \theoremprework{%
 \setlength\theorempostskipamount{3\parskip}
 }
+\theoremheaderfont{\normalfont\sffamily\bfseries}
+\theorembodyfont{\upshape} 
 \theoremsymbol{}
 \theoremseparator{:} 
 \newtheorem{solution}{Solution}
@@ -398,8 +400,8 @@ bpoint/.style={fill=black,draw=black},%
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{\noindent{\color{RoyalBlue}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
-\newcommand{\soln}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{\textsf{Solution:}}}{{\textsf{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\prob}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
+\newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{\textsf{Solution:}}}{{\textsf{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
 \newcommand{\isum}[1]{\sum_{#1}^\infty}
