@@ -9,7 +9,7 @@
 %\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.05pt}
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
-\usepackage[margin=1in]{geometry}
+\usepackage{geometry}
 
 \usepackage[nointegrals]{wasysym}
 \usepackage{float, wrapfig, picinpar}
@@ -126,7 +126,7 @@ bpoint/.style={fill=black,draw=black},%
 \setcounter{probCounter}{0}
 
 \theoremstyle{plain}
-\theoremheaderfont{\normalfont\bfseries}
+\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\itshape}
 \theoremseparator{:}
 \theorempostskip{0cm}
@@ -150,11 +150,12 @@ bpoint/.style={fill=black,draw=black},%
 \newtheorem{pclaim}{Claim}[probCounter]
 
 \theoremstyle{plain}
-\theoremheaderfont{\normalfont\bfseries}
+\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
 \theoremseparator{:}
 \theorempostskip{0cm}
 
+\newtheorem{pdefn}{Definition}[probCounter]
 \newtheorem{defn}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{fact}[theorem]{Fact}
@@ -170,7 +171,7 @@ bpoint/.style={fill=black,draw=black},%
 \theoremseparator{.}
 \newtheorem{hint}{Hint}
 
-\theoremheaderfont{\normalfont\bfseries}
+\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
 \theoremseparator{:}
 \theoremstyle{nonumberplain}
@@ -183,7 +184,7 @@ bpoint/.style={fill=black,draw=black},%
 \theoremprework{%
 \setlength\theorempostskipamount{3\parskip}
 }
-\theoremheaderfont{\normalfont\itshape\bfseries}
+\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
 \theoremseparator{.} 
@@ -229,6 +230,8 @@ bpoint/.style={fill=black,draw=black},%
 \newcommand{\ex}{\ensuremath{\mathsf{E}}}
 \newcommand{\transp}{\ensuremath{^\mathsf{T}}}
 \newcommand{\iv}{\ensuremath{^{-1}}}
+\newcommand{\img}{\ensuremath{^{\to}}}
+\newcommand{\pimg}{\ensuremath{^{\leftarrow}}}
 \newcommand{\cp}{\ensuremath{^{\complement}}}
 \newcommand{\defeq}{\ensuremath \stackrel{\Delta}{=}}
 
@@ -300,9 +303,9 @@ bpoint/.style={fill=black,draw=black},%
 \DeclareMathOperator{\len}{\ensuremath{len}}
 \DeclareMathOperator{\lcm}{\ensuremath{lcm}}
 \DeclareMathOperator{\pdf}{\ensuremath{pdf}}
-\DeclareMathOperator{\Null}{\ensuremath{Null}}
+\DeclareMathOperator{\Null}{\ensuremath{null}}
 \DeclareMathOperator{\Span}{\ensuremath{span}}
-\DeclareMathOperator{\Ker}{\ensuremath{Ker}}
+\DeclareMathOperator{\Ker}{\ensuremath{ker}}
 \DeclareMathOperator{\proj}{\ensuremath{proj}}
 \DeclareMathOperator{\sech}{\ensuremath{sech}}
 \DeclareMathOperator{\cis}{\ensuremath{cis}}
@@ -314,13 +317,17 @@ bpoint/.style={fill=black,draw=black},%
 \DeclareMathOperator{\Hom}{\ensuremath{Hom}}
 \DeclareMathOperator{\End}{\ensuremath{End}}
 \DeclareMathOperator{\Rng}{\ensuremath{Rng}}
+\DeclareMathOperator{\range}{\ensuremath{range}}
 \DeclareMathOperator{\dom}{\ensuremath{Dom}}
 \DeclareMathOperator{\tr}{\ensuremath{tr}}
 \DeclareMathOperator{\Int}{\ensuremath{Int}}
+\DeclareMathOperator{\itr}{\ensuremath{int}}
 \DeclareMathOperator{\Ext}{\ensuremath{Ext}}
 \DeclareMathOperator{\Clo}{\ensuremath{Clo}}
+\DeclareMathOperator{\cl}{\ensuremath{cl}}
+\DeclareMathOperator{\fr}{\ensuremath{fr}}
 \DeclareMathOperator{\Bdy}{\ensuremath{Bdy}}
-\DeclareMathOperator{\Acc}{\ensuremath{Acc}}
+\DeclareMathOperator{\Acc}{\ensuremath{acc}}
 \DeclareMathOperator{\curl}{\ensuremath{curl}}
 \DeclareMathOperator{\grad}{\ensuremath{grad}}
 \DeclareMathOperator{\dil}{\ensuremath{dil}}
@@ -354,7 +361,7 @@ bpoint/.style={fill=black,draw=black},%
 
 \newcommand{\examhead}[6]{
 	\begin{center}
-	{{\large \fbox{\parbox{0.98\textwidth}{  \vskip 0.075in 
+	{{\large \fbox{\parbox{0.98\textwidth}{ 
 		\hbox to \hsize{#1 \hfil #2} \vskip 0.075in 
 		\hbox to \hsize{#3 \hfil #4} \vskip 0.075in 
 		\hbox to \hsize{#5 \hfil #6}
@@ -444,7 +451,24 @@ This page is intentionally left blank.%
 <10-12> MnSymbolC10
 <12-> MnSymbolC12}{}
 \DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
-\DeclareMathSymbol{\powerset}{\mathalpha}{mnsymbols}{180}
+\DeclareMathSymbol{\powerset}{\mathop}{mnsymbols}{180}
+\DeclareMathSymbol{\varinfty}{\mathop}{mnsymbols}{170}
+
+
+\DeclareFontFamily{U}{MnSymbolA}{}
+\DeclareFontShape{U}{MnSymbolA}{m}{n}{
+<-6> MnSymbolA5
+<6-7> MnSymbolA6
+<7-8> MnSymbolA7
+<8-9> MnSymbolA8
+<9-10> MnSymbolA9
+<10-12> MnSymbolA10
+<12-> MnSymbolA12}{}
+\DeclareSymbolFont{mnsymbolsa}{U}{MnSymbolA}{m}{n}
+\DeclareMathSymbol{\mto}{\mathop}{mnsymbolsa}{0}
+\DeclareMathSymbol{\mup}{\mathop}{mnsymbolsa}{1}
+\DeclareMathSymbol{\mget}{\mathop}{mnsymbolsa}{2}
+\DeclareMathSymbol{\mdown}{\mathop}{mnsymbolsa}{3}
 
 %% code from mathabx.sty and mathabx.dcl
 \DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
