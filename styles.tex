@@ -4,9 +4,9 @@
 
 \usepackage[usenames,dvipsnames]{xcolor}
 
+\usepackage[mathletters]{ucs}
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{pdfrender}
-%\pdfrender{StrokeColor=black,TextRenderingMode=2,LineWidth=0.05pt}
 \usepackage{typearea}
 \usepackage{scrlayer-scrpage}
 \usepackage{geometry}
@@ -14,22 +14,22 @@
 \usepackage[nointegrals]{wasysym}
 \usepackage{float, wrapfig, picinpar}
 \usepackage{lastpage, hyperref,textcomp}
-\usepackage{url,interval,calc,framed,fancybox,quoting,empheq, algorithm, stackrel}
+\usepackage{url, interval, calc,framed, fancybox, quoting, empheq, algorithm, stackrel}
+\usepackage{amsfonts, amssymb}
+
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
 
 \DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}   
 \usepackage{bbm}
-\usepackage{amsfonts, amssymb}
-%usepackage[cmsy]{MnSymbol}
+%\usepackage{dsfont}
 
 \usepackage[e]{esvect}
 \usepackage[makeroom]{cancel}
 
 %=== loading symbols ===
-\usepackage{dsfont}
-\newcommand{\eins}{\ensuremath{\mathds{1}}}
+\newcommand{\eins}{\ensuremath{\mathbbm{1}}}
 
 %\usepackage{stmaryrd}
 \usepackage{pgfplots}
@@ -42,10 +42,6 @@
 \usepackage[font=small,labelsep=none]{caption}
 \usepackage{subfig}
 \usepackage{mathdots}
-
-% --- to use mint, you need python 2.6 and pegmatite, 
-% --- install using command: "easy_install Pigments"
-\usepackage{minted}
 
 \usepackage{listings}
 \lstset{
@@ -79,7 +75,7 @@
 %\makeatother
 
 %%% === TODO: Better handling with KOMA, now generates error
-\usepackage[compact]{titlesec}
+%\usepackage[compact]{titlesec}
 %\titlespacing{\section}{0pt}{0pt}{0cm}
 %\titlespacing{\subsection}{0pt}{0pt}{0cm}
 
