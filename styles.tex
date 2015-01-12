@@ -15,7 +15,7 @@
 \usepackage{float, wrapfig, picinpar}
 \usepackage{lastpage, hyperref,textcomp}
 \usepackage{url, interval, calc,framed, fancybox, quoting, empheq, algorithm, stackrel}
-\usepackage{amsfonts, amssymb}
+\usepackage{amsfonts, amssymb, sectsty}
 
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
@@ -31,7 +31,6 @@
 %=== loading symbols ===
 \newcommand{\eins}{\ensuremath{\mathbbm{1}}}
 
-%\usepackage{stmaryrd}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.10}
 
@@ -124,11 +123,14 @@ bpoint/.style={fill=black,draw=black},%
 \newcounter{probCounter}
 \setcounter{probCounter}{0}
 
+%% ===
+\theorempreskip{3\parskip}
+\theorempostskip{3\parskip}
+
 \theoremstyle{plain}
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\itshape}
 \theoremseparator{:}
-\theorempostskip{0cm}
 
 \newtheorem{ptheorem}{Theorem}[probCounter]
 \newtheorem{theorem}{Theorem}
@@ -143,7 +145,6 @@ bpoint/.style={fill=black,draw=black},%
 \theoremheaderfont{\normalfont\bfseries}
 \theorembodyfont{\slshape}
 \theoremseparator{:}
-\theorempostskip{0cm}
 
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{pclaim}{Claim}[probCounter]
@@ -152,7 +153,6 @@ bpoint/.style={fill=black,draw=black},%
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
 \theoremseparator{:}
-\theorempostskip{0cm}
 
 \newtheorem{pdefn}{Definition}[probCounter]
 \newtheorem{defn}[theorem]{Definition}
@@ -180,24 +180,20 @@ bpoint/.style={fill=black,draw=black},%
 \newtheorem{thm}{Theorem}
 
 
-\theoremprework{%
-\setlength\theorempostskipamount{3\parskip}
-}
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
 \theoremseparator{.} 
 \theoremsymbol{\rule{1ex}{2ex}} 
 \newtheorem{proof}{Proof}
-\theoremprework{%
-\setlength\theorempostskipamount{3\parskip}
-}
+
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremsymbol{}
 \theoremseparator{:} 
 \newtheorem{solution}{Solution}
 
+%% ===
 \newcommand{\NP}{\textsc{np\ }}
 \newcommand{\iid}{\textsc{iid\ }}
 \newcommand{\id}{\textsc{id}}
