@@ -16,6 +16,7 @@
 \usepackage{lastpage, hyperref,textcomp}
 \usepackage{url, interval, calc,framed, fancybox, quoting, empheq, algorithm, stackrel}
 \usepackage{amsfonts, amssymb, sectsty}
+\usepackage{longtable,tabu}
 
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
@@ -402,7 +403,7 @@ bpoint/.style={fill=black,draw=black},%
 
 \usepackage{centernot}
 
-\newcommand{\prob}[1]{\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
+\newcommand{\prob}[1]{\vspace{2\parskip}\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
 \newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{\textsf{Solution:}}}{{\textsf{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
