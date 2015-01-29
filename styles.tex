@@ -125,8 +125,8 @@ bpoint/.style={fill=black,draw=black},%
 \setcounter{probCounter}{0}
 
 %% ===
-\theorempreskip{3\parskip}
-\theorempostskip{3\parskip}
+\theorempreskip{2\parskip}
+\theorempostskip{2\parskip}
 
 \theoremstyle{plain}
 \theoremheaderfont{\normalfont\sffamily\bfseries}
@@ -172,16 +172,6 @@ bpoint/.style={fill=black,draw=black},%
 \newtheorem{hint}{Hint}
 
 \theoremheaderfont{\normalfont\sffamily\bfseries}
-\theorembodyfont{\upshape}
-\theoremseparator{:}
-\theoremstyle{nonumberplain}
-\newtheorem{clm}{Claim}
-\theorembodyfont{\itshape}
-\newtheorem{lem}{Lemma}
-\newtheorem{thm}{Theorem}
-
-
-\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
 \theoremseparator{.} 
@@ -193,6 +183,18 @@ bpoint/.style={fill=black,draw=black},%
 \theoremsymbol{}
 \theoremseparator{:} 
 \newtheorem{solution}{Solution}
+
+\theoremheaderfont{\normalfont\sffamily\bfseries}
+\theorembodyfont{\upshape}
+\theoremseparator{:}
+\theoremstyle{nonumberplain}
+\newtheorem{clm}{Claim}
+\theorembodyfont{\itshape}
+\newtheorem{lem}{Lemma}
+\newtheorem{thm}{Theorem}
+\theorembodyfont{\upshape}
+\theoremindent=4\parskip
+\newtheorem{subthm}{Theorem}
 
 %% ===
 \newcommand{\NP}{\textsc{np\ }}
@@ -401,10 +403,10 @@ bpoint/.style={fill=black,draw=black},%
 \usepackage{chemfig}
 \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
 
-\newcommand{\mysetminusD}{\hbox{\tikz{\draw[line width=0.6pt,line cap=round] (3pt,0) -- (0,6pt);}}}
+\newcommand{\mysetminusD}{\hbox{\tikz{\draw[line width=0.4pt,line cap=round] (3pt,0) -- (0,6pt);}}}
 \newcommand{\mysetminusT}{\mysetminusD}
-\newcommand{\mysetminusS}{\hbox{\tikz{\draw[line width=0.45pt,line cap=round] (2pt,0) -- (0,4pt);}}}
-\newcommand{\mysetminusSS}{\hbox{\tikz{\draw[line width=0.4pt,line cap=round] (1.5pt,0) -- (0,3pt);}}}
+\newcommand{\mysetminusS}{\hbox{\tikz{\draw[line width=0.25pt,line cap=round] (2pt,0) -- (0,4pt);}}}
+\newcommand{\mysetminusSS}{\hbox{\tikz{\draw[line width=0.2pt,line cap=round] (1.5pt,0) -- (0,3pt);}}}
 \newcommand{\mysetminus}{\mathbin{\mathchoice{\mysetminusD}{\mysetminusT}{\mysetminusS}{\mysetminusSS}}}
 
 
