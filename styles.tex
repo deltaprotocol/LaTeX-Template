@@ -231,10 +231,10 @@ bpoint/.style={fill=black,draw=black},%
 \newcommand{\cp}{\ensuremath{^{\complement}}}
 \newcommand{\defeq}{\ensuremath \stackrel{\Delta}{=}}
 
-\let\originalleft\left
-\let\originalright\right
-\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
-\renewcommand{\right}{\aftergroup\egroup\originalright}
+%\let\originalleft\left
+%\let\originalright\right
+%\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+%\renewcommand{\right}{\aftergroup\egroup\originalright}
 
 \newcommand{\delimit}[4]{
 	\ifcase #1
@@ -400,7 +400,13 @@ bpoint/.style={fill=black,draw=black},%
 	
 \usepackage{chemfig}
 \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
-  
+
+\newcommand{\mysetminusD}{\hbox{\tikz{\draw[line width=0.6pt,line cap=round] (3pt,0) -- (0,6pt);}}}
+\newcommand{\mysetminusT}{\mysetminusD}
+\newcommand{\mysetminusS}{\hbox{\tikz{\draw[line width=0.45pt,line cap=round] (2pt,0) -- (0,4pt);}}}
+\newcommand{\mysetminusSS}{\hbox{\tikz{\draw[line width=0.4pt,line cap=round] (1.5pt,0) -- (0,3pt);}}}
+\newcommand{\mysetminus}{\mathbin{\mathchoice{\mysetminusD}{\mysetminusT}{\mysetminusS}{\mysetminusSS}}}
+
 
 \usepackage{centernot}
 
