@@ -1,12 +1,8 @@
 LaTeX
 =====
 
-# This project is obsoleted.  Will be moving to utilize xelatex instead.
-
-This is a LaTeX template and styles import file I use for most document typesetting using MacTeX. 
-This loads an assortment of packages (probably more than you will ever need), so remove the unnecessary ones 
-if you want to take use of this.  
-
+* 2015/02/05 Updated formating
+* 2015/01/09 Removed minted package
 * 2014/11/09 Added ability to add symbol from MnSymbols
 * 2014/10/28 Added Hint env
 * 2014/10/22 Added pair command
