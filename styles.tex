@@ -23,8 +23,9 @@
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
 
 \DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}   
-\usepackage{bbm}
-%\usepackage{dsfont}
+\DeclareMathAlphabet{\mathbbm}{U}{bbm}{m}{n}
+%\usepackage{bbm}
+\usepackage{dsfont}
 
 \usepackage[e]{esvect}
 \usepackage[makeroom]{cancel}
@@ -42,6 +43,9 @@
 \usepackage[font=small,labelsep=none]{caption}
 \usepackage{subfig}
 \usepackage{mathdots}
+
+\let\rsfsscr=\mathscr
+\usepackage[mathscr]{euscript}
 
 \usepackage{listings}
 \lstset{
@@ -202,13 +206,13 @@ bpoint/.style={circle, inner sep=0pt, minimum size=2pt, fill=black, draw=black},
 \newcommand{\id}{\textsc{id}}
 
 \newcommand{\ignore}[1]{}
-
 \newcommand{\mb}[1]{\ensuremath{\mathbf{#1}}}
 \newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}}
 \newcommand{\mf}[1]{\ensuremath{\mathbb{#1}}}
-\newcommand{\me}[1]{\ensuremath{\mathscr{#1}}}
+\newcommand{\me}[1]{\ensuremath{\rsfsscr{#1}}}
 \newcommand{\mk}[1]{\ensuremath{\mathfrak{#1}}}
 \newcommand{\mv}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\ms}[1]{\ensuremath{\mathscr{#1}}}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
@@ -334,7 +338,8 @@ bpoint/.style={circle, inner sep=0pt, minimum size=2pt, fill=black, draw=black},
 \DeclareMathOperator{\cof}{\ensuremath{cof}}
 \DeclareMathOperator{\area}{\ensuremath{area}}
 \DeclareMathOperator{\vol}{\ensuremath{vol}}
-
+\DeclareMathOperator{\Sym}{\ensuremath{Sym}}
+\DeclareMathOperator{\Syl}{\ensuremath{Syl}}
 % Inverse hyperbolic 
 \DeclareMathOperator{\artanh}{\ensuremath{artanh}}
 \DeclareMathOperator{\arcosh}{\ensuremath{arcosh}}
