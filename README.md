@@ -1,6 +1,6 @@
 LaTeX
 =====
-
+* 2015/03/27 General update, added new script font 
 * 2015/02/05 Updated formating
 * 2015/01/09 Removed minted package
 * 2014/11/09 Added ability to add symbol from MnSymbols
