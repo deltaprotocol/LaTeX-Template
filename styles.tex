@@ -38,7 +38,7 @@
 
 \usepackage{amsmath, amsopn, mathtools, tikz, units}
 \usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor, esint}
-\usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc,arrows,petri,topaths}
+\usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc,arrows,petri,topaths,fadings,decorations.pathreplacing}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
 \usepackage[font=small,labelsep=none]{caption}
 \usepackage{subfig}
@@ -67,16 +67,16 @@
 \AtBeginDocument{\setlength{\belowdisplayskip}{4pt}}%
 
 %=== section spacing ==
-%\makeatletter
-% \renewcommand{\section}{\@startsection {section}{1}{\z@}%
-%     {-0.1ex \@plus -.5ex \@minus -.2ex}%
-%     {0.1ex \@plus -.5ex}%
-%     {\bfseries\Large}}
-% \renewcommand{\subsection}{\@startsection {subsection}{2}{\z@}%
-%     {-0.1ex \@plus -.5ex \@minus -.2ex}%
-%     {0.1ex \@plus -.2ex}%
-%    {\bfseries}}
-%\makeatother
+\makeatletter
+ \renewcommand{\section}{\@startsection {section}{1}{\z@}%
+     {-0.1ex \@plus -0.5ex \@minus -.2ex}%
+     {0.1ex \@plus .2ex}%
+     {\bfseries\Large}}
+ \renewcommand{\subsection}{\@startsection {subsection}{2}{\z@}%
+     {-0.1ex \@plus -.5ex \@minus -.2ex}%
+     {0.1ex \@plus -.2ex}%
+    {\bfseries}}
+\makeatother
 
 %%% === TODO: Better handling with KOMA, now generates error
 %\usepackage[compact]{titlesec}
@@ -87,8 +87,9 @@
 \tikzset{%
 extended line/.style={shorten >=-#1,shorten <=-#1},%
 extended line/.default=.5cm,%
-wpoint/.style={circle, inner sep=0pt, minimum size=2pt, fill=white, draw=black},%
-bpoint/.style={circle, inner sep=0pt, minimum size=2pt, fill=black, draw=black},%
+wpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=white, draw},%
+bpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=black, draw},%
+rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 }
 
 \addtokomafont{disposition}{\rmfamily}
@@ -284,7 +285,7 @@ bpoint/.style={circle, inner sep=0pt, minimum size=2pt, fill=black, draw=black},
 }
 
 \usepackage{commath}
-\newcommand{\dg}{\ensuremath{^{\circ}}}
+\newcommand{\degrees}{\ensuremath{^{\circ}}}
 \newcommand{\iter}[1]{\ensuremath{^{\circ #1}}}
 \newcommand{\nder}[1]{\ensuremath{^{\left(#1\right)}}}
 \newcommand{\setc}[3][0]{\delb{#1}{\{}{#2}{#3}{\}}}
