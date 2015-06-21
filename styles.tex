@@ -5,18 +5,20 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 
 \usepackage[mathletters]{ucs}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{typearea}
+\usepackage[english]{babel}
+
+\usepackage{typearea, geometry}
 \usepackage{scrlayer-scrpage}
-\usepackage{geometry}
 
 \usepackage[nointegrals]{wasysym}
 \usepackage{float, wrapfig, picinpar}
-\usepackage{lastpage, hyperref,textcomp}
+\usepackage{lastpage, hyperref, textcomp}
 \usepackage{url, interval, calc,framed, fancybox, quoting, empheq, algorithm, stackrel}
 \usepackage{amsfonts, amssymb, sectsty}
 \usepackage{longtable,tabu}
+
 
 \usepackage{algpseudocode}
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
@@ -34,7 +36,7 @@
 \newcommand{\eins}{\ensuremath{\mathbbm{1}}}
 
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.10}
+\pgfplotsset{compat=1.12}
 
 \usepackage{amsmath, amsopn, mathtools, tikz, units}
 \usepackage{upgreek, bold-extra, multicol, enumerate, mathrsfs, tensor, esint}
@@ -66,22 +68,8 @@
 \AtBeginDocument{\setlength{\abovedisplayskip}{4pt}}%
 \AtBeginDocument{\setlength{\belowdisplayskip}{4pt}}%
 
-%=== section spacing ==
-\makeatletter
- \renewcommand{\section}{\@startsection {section}{1}{\z@}%
-     {-0.1ex \@plus -0.5ex \@minus -.2ex}%
-     {0.1ex \@plus .2ex}%
-     {\bfseries\Large}}
- \renewcommand{\subsection}{\@startsection {subsection}{2}{\z@}%
-     {-0.1ex \@plus -.5ex \@minus -.2ex}%
-     {0.1ex \@plus -.2ex}%
-    {\bfseries}}
-\makeatother
-
-%%% === TODO: Better handling with KOMA, now generates error
-%\usepackage[compact]{titlesec}
-%\titlespacing{\section}{0pt}{0pt}{0cm}
-%\titlespacing{\subsection}{0pt}{0pt}{0cm}
+%% Sectioning (example)
+% \RedeclareSectionCommand[ beforeskip=-.5\baselineskip, afterskip=.02\baselineskip]{section}
 
 %% tikz
 \tikzset{%
