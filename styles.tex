@@ -24,7 +24,7 @@
 \algrenewcommand\algorithmicprocedure{\textbf{function}}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\triangleright$ #1}
 
-\DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}   
+%\DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}   
 \DeclareMathAlphabet{\mathbbm}{U}{bbm}{m}{n}
 %\usepackage{bbm}
 \usepackage{dsfont}
@@ -69,7 +69,10 @@
 \AtBeginDocument{\setlength{\belowdisplayskip}{4pt}}%
 
 %% Sectioning (example)
-% \RedeclareSectionCommand[ beforeskip=-.5\baselineskip, afterskip=.02\baselineskip]{section}
+%\RedeclareSectionCommand[ beforeskip=0.5\baselineskip, afterskip=0.05\baselineskip]{section}
+%\RedeclareSectionCommand[ beforeskip=0.5\baselineskip, afterskip=0.05\baselineskip]{subsection}
+%\addtokomafont{section}{\mdseries\scshape\large\centering}
+%\addtokomafont{subsection}{\mdseries\scshape\normalsize\centering}
 
 %% tikz
 \tikzset{%
@@ -136,8 +139,8 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \newtheorem{corollary}[theorem]{Corollary}
 
 \theoremstyle{plain}
-\theoremheaderfont{\normalfont\bfseries}
-\theorembodyfont{\slshape}
+\theoremheaderfont{\normalfont\sffamily\bfseries}
+\theorembodyfont{\upshape}
 \theoremseparator{:}
 
 \newtheorem{claim}[theorem]{Claim}
@@ -455,55 +458,55 @@ This page is intentionally left blank.%
 }
 
 %% == Single letter loading
-\DeclareFontFamily{U}{MnSymbolC}{}
-\DeclareFontShape{U}{MnSymbolC}{m}{n}{
-<-6> MnSymbolC5
-<6-7> MnSymbolC6
-<7-8> MnSymbolC7
-<8-9> MnSymbolC8
-<9-10> MnSymbolC9
-<10-12> MnSymbolC10
-<12-> MnSymbolC12}{}
-\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
-\DeclareMathSymbol{\powerset}{\mathop}{mnsymbols}{180}
-\DeclareMathSymbol{\varinfty}{\mathop}{mnsymbols}{170}
-
-
-\DeclareFontFamily{U}{MnSymbolA}{}
-\DeclareFontShape{U}{MnSymbolA}{m}{n}{
-<-6> MnSymbolA5
-<6-7> MnSymbolA6
-<7-8> MnSymbolA7
-<8-9> MnSymbolA8
-<9-10> MnSymbolA9
-<10-12> MnSymbolA10
-<12-> MnSymbolA12}{}
-\DeclareSymbolFont{mnsymbolsa}{U}{MnSymbolA}{m}{n}
-\DeclareMathSymbol{\mto}{\mathop}{mnsymbolsa}{0}
-\DeclareMathSymbol{\mup}{\mathop}{mnsymbolsa}{1}
-\DeclareMathSymbol{\mget}{\mathop}{mnsymbolsa}{2}
-\DeclareMathSymbol{\mdown}{\mathop}{mnsymbolsa}{3}
-
-%% code from mathabx.sty and mathabx.dcl
-\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
-\DeclareFontShape{U}{mathx}{m}{n}{
-      <5> <6> <7> <8> <9> <10>
-      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
-      mathx10
-      }{}
-\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
-\DeclareFontSubstitution{U}{mathx}{m}{n}
-\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
-\DeclareMathAccent{\wideparen}{0}{mathx}{"75}
-
-\def\app#1#2{%
-  \mathrel{%
-    \setbox0=\hbox{$#1\sim$}%
-    \setbox2=\hbox{%
-      \rlap{\hbox{$#1\propto$}}%
-      \lower1.2\ht0\box0%
-    }%
-    \raise0.25\ht2\box2%
-  }%
-}
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%<-6> MnSymbolC5
+%<6-7> MnSymbolC6
+%<7-8> MnSymbolC7
+%<8-9> MnSymbolC8
+%<9-10> MnSymbolC9
+%<10-12> MnSymbolC10
+%<12-> MnSymbolC12}{}
+%\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
+%\DeclareMathSymbol{\powerset}{\mathop}{mnsymbols}{180}
+%\DeclareMathSymbol{\varinfty}{\mathop}{mnsymbols}{170}
+%
+%
+%\DeclareFontFamily{U}{MnSymbolA}{}
+%\DeclareFontShape{U}{MnSymbolA}{m}{n}{
+%<-6> MnSymbolA5
+%<6-7> MnSymbolA6
+%<7-8> MnSymbolA7
+%<8-9> MnSymbolA8
+%<9-10> MnSymbolA9
+%<10-12> MnSymbolA10
+%<12-> MnSymbolA12}{}
+%\DeclareSymbolFont{mnsymbolsa}{U}{MnSymbolA}{m}{n}
+%\DeclareMathSymbol{\mto}{\mathop}{mnsymbolsa}{0}
+%\DeclareMathSymbol{\mup}{\mathop}{mnsymbolsa}{1}
+%\DeclareMathSymbol{\mget}{\mathop}{mnsymbolsa}{2}
+%\DeclareMathSymbol{\mdown}{\mathop}{mnsymbolsa}{3}
+%
+%%% code from mathabx.sty and mathabx.dcl
+%\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+%\DeclareFontShape{U}{mathx}{m}{n}{
+%      <5> <6> <7> <8> <9> <10>
+%      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
+%      mathx10
+%      }{}
+%\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+%\DeclareFontSubstitution{U}{mathx}{m}{n}
+%\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+%\DeclareMathAccent{\wideparen}{0}{mathx}{"75}
+%
+%\def\app#1#2{%
+%  \mathrel{%
+%    \setbox0=\hbox{$#1\sim$}%
+%    \setbox2=\hbox{%
+%      \rlap{\hbox{$#1\propto$}}%
+%      \lower1.2\ht0\box0%
+%    }%
+%    \raise0.25\ht2\box2%
+%  }%
+%}
 \def\approxprop{\mathpalette\app\relax}
