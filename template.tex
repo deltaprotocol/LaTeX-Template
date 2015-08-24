@@ -14,17 +14,22 @@
 \cfoot[\vbox{\vspace{0.15cm}\pagemark}]{\vbox{\vspace{0.15cm}\pagemark}}
 \pagestyle{scrheadings}
 
-%% ==== Label ===
-%\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+%% ==== Header / footer ===
+\pagestyle{plain.scrheadings}
 
-%% ==== Sectioning ===
-%\setkomafont{disposition}{\normalfont}
-%\RedeclareSectionCommand[ beforeskip=-.5\baselineskip, afterskip=.02\baselineskip]{section}
-\addtokomafont{section}{\centering\scshape\large}
-\renewcommand*{\thesection}{\roman{section}}
-%\titlespacing{\section}{0pt}{0pt}{0cm}
-%\titlespacing{\subsection}{0pt}{0pt}{0cm}
-%\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+%% ==== Label ===
+\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+
+% ==== Sectioning ===
+\RedeclareSectionCommand[ beforeskip=0.5\baselineskip, afterskip=0.05\baselineskip]{section}
+\RedeclareSectionCommand[ beforeskip=0.5\baselineskip, afterskip=0.05\baselineskip]{subsection}
+
+\addtokomafont{section}{\mdseries\scshape\large\centering}
+\addtokomafont{subsection}{\mdseries\scshape\normalsize\centering}
+
+\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+\renewcommand{\thesection}{\roman{section}}
+\renewcommand{\thesubsection}{\roman{section}.\roman{subsection}}
 
 %%%% === Turn everything into displaystyle
 %\everymath{\displaystyle}

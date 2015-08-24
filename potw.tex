@@ -8,15 +8,22 @@
 \include{styles}
 
 %% ==== Header / footer ===
-%\setkomafont{pageheadfoot}{\normalfont}
-%\RedeclareSectionCommand[ beforeskip=-.5\baselineskip, afterskip=.02\baselineskip]{section}
 \pagestyle{plain.scrheadings}
 
 %% ==== Label ===
-%\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
-
-%% ==== Sectioning ===
 \renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+
+% ==== Sectioning ===
+\RedeclareSectionCommand[ beforeskip=0.5\baselineskip, afterskip=0.05\baselineskip]{section}
+\RedeclareSectionCommand[ beforeskip=0.5\baselineskip, afterskip=0.05\baselineskip]{subsection}
+
+\addtokomafont{section}{\mdseries\scshape\large\centering}
+\addtokomafont{subsection}{\mdseries\scshape\normalsize\centering}
+
+\renewcommand{\theequation}{\theprobCounter.\arabic{equation}}
+\renewcommand{\thesection}{\roman{section}}
+\renewcommand{\thesubsection}{\roman{section}.\roman{subsection}}
+
 %% ==== Turn everything into displaystyle ===
 %\everymath{\displaystyle}
 
