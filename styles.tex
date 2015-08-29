@@ -5,7 +5,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 
 \usepackage[mathletters]{ucs}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 
@@ -510,4 +510,9 @@ This page is intentionally left blank.%
 %    \raise0.25\ht2\box2%
 %  }%
 %}
-\def\approxprop{\mathpalette\app\relax}
+%\def\approxprop{\mathpalette\app\relax}
+
+\def\Xint#1{\ \ \mathchoice      {\XXint\displaystyle\textstyle{#1}}%      {\XXint\textstyle\scriptstyle{#1}}%      {\XXint\scriptstyle\scriptscriptstyle{#1}}%      {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+      \ \iiint}   \def\XXint#1#2#3{{\setbox0=\hbox{$#1{\ \ \ #2#3}{\iiint}$}        \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\newcommand{\odc}{\subset\!\supset}
+\newcommand{\oiiint}{\Xint{\odc}}
