@@ -35,7 +35,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.12}
 
-\usepackage{amsmath, amsopn, multicol, enumerate, mathtools, tikz, units}
+\usepackage{amsmath, amsopn, multicol, enumerate, mathtools, tikz, units, bbding}
 \usepackage{upgreek, bold-extra, mathrsfs, tensor}
 \usetikzlibrary{shapes,calendar,matrix,backgrounds,folding,knots,decorations.markings,calc,arrows,petri,topaths,fadings,decorations.pathreplacing}
 \usepackage[framed, hyperref, thmmarks, amsmath]{ntheorem}
@@ -178,7 +178,8 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
-\theoremsymbol{}
+%\theoremsymbol{}
+\theoremsymbol{\rule{1ex}{2ex}} 
 \theoremseparator{:} 
 \newtheorem{solution}{Solution}
 
@@ -424,7 +425,7 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 
 \usepackage{centernot}
 
-\newcommand{\parte}[1]{\vspace{2\parskip}\noindent{\color{Cerulean}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\parte}[1]{\vspace{2\parskip}\noindent{\color{Cerulean}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Part:}}{\textsf{Part} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\prob}[1]{\vspace{2\parskip}\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large \textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
 \newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{\textsf{Solution:}}}{{\textsf{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
@@ -512,7 +513,13 @@ This page is intentionally left blank.%
 %}
 %\def\approxprop{\mathpalette\app\relax}
 
-\def\Xint#1{\ \ \mathchoice      {\XXint\displaystyle\textstyle{#1}}%      {\XXint\textstyle\scriptstyle{#1}}%      {\XXint\scriptstyle\scriptscriptstyle{#1}}%      {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
-      \ \iiint}   \def\XXint#1#2#3{{\setbox0=\hbox{$#1{\ \ \ #2#3}{\iiint}$}        \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\Xint#1{\ \ \mathchoice
+      {\XXint\displaystyle\textstyle{#1}}%
+      {\XXint\textstyle\scriptstyle{#1}}%
+      {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+      {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+      \ \iiint}
+   \def\XXint#1#2#3{{\setbox0=\hbox{$#1{\ \ \ #2#3}{\iiint}$}
+        \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
 \newcommand{\odc}{\subset\!\supset}
 \newcommand{\oiiint}{\Xint{\odc}}
