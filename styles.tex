@@ -229,7 +229,9 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \DeclareMathOperator{\pr}{\mathsf{Pr}}
 
 \newcommand{\ex}{\ensuremath{\mathsf{E}}}
-\newcommand{\transp}{\ensuremath{^\mathsf{T}}}
+\newcommand\T{{\mathpalette\raiseT\intercal}}
+\newcommand\raiseT[2]{\raisebox{0.25ex}{$#1#2$}}
+\newcommand{\transp}{\ensuremath{^\top}}
 \newcommand{\iv}{\ensuremath{^{-1}}}
 \newcommand{\img}{\ensuremath{^{\to}}}
 \newcommand{\pimg}{\ensuremath{^{\leftarrow}}}
