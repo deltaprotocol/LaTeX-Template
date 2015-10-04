@@ -99,9 +99,10 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 
 \newenvironment{enumI}{\begin{itemize}}{\end{itemize}}
 \newenvironment{enumC}{\begin{enumerate}}{\end{enumerate}}
-\newenvironment{enumCN}{\begin{enumerate}[label=\arabic*), ref=\arabic*]}{\end{enumerate}}
-\newenvironment{enumCRI}{\begin{enumerate}[label=(\emph{\roman*}), ref=\arabic*]}{\end{enumerate}}
-\newenvironment{enumCR}{\begin{enumerate}[label=({\roman*}), ref=\arabic*]}{\end{enumerate}}
+\newenvironment{enumCS}{\begin{enumerate}[label=(\alph*), ref=\alpha*]}{\end{enumerate}}
+\newenvironment{enumCN}{\begin{enumerate}[label=(\arabic*), ref=\arabic*]}{\end{enumerate}}
+\newenvironment{enumCRI}{\begin{enumerate}[label=(\emph{\roman*}), ref=\roman*]}{\end{enumerate}}
+\newenvironment{enumCR}{\begin{enumerate}[label=({\roman*}), ref=\roman*]}{\end{enumerate}}
 
 
 \setlength{\headheight}{1.25\baselineskip}
@@ -126,7 +127,7 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \theorempostskip{2\parskip}
 
 \theoremstyle{plain}
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+%\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\itshape}
 \theoremseparator{:}
 
@@ -140,7 +141,7 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \newtheorem{corollary}[theorem]{Corollary}
 
 \theoremstyle{plain}
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+%\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
 \theoremseparator{:}
 
@@ -170,21 +171,20 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \newtheorem{eg}{Example}
 \newtheorem{fct}{Fact}
 
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+%\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
 \theoremseparator{.} 
 \theoremsymbol{\rule{1ex}{2ex}} 
 \newtheorem{proof}{Proof}
 
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+%\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremsymbol{}
-%\theoremsymbol{\rule{1ex}{2ex}} 
 \theoremseparator{:} 
 \newtheorem{solution}{Solution}
 
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+%\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
 \theoremseparator{:}
 \theoremstyle{nonumberplain}
@@ -432,9 +432,9 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 
 \usepackage{centernot}
 
-\newcommand{\parte}[1]{\vspace{2\parskip}\noindent{\color{Cerulean}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Part:}}{\textsf{Part} {\textcolor{Black}{#1}}\textsf{:}}}}}}}
-\newcommand{\prob}[1]{\vspace{2\parskip}\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{\textsf{Problem:}}{\textsf{Problem} {\large\textcolor{Black}{#1}}\textsf{:}}}}}} \stepcounter{probCounter}}
-\newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{\textsf{Solution:}}}{{\textsf{Solution}} {\large \textcolor{Black}{#1}}\textsf{:}}}}}}}
+\newcommand{\parte}[1]{\vspace{2\parskip}\noindent{\color{Cerulean}\textbf{{{\ifthenelse{\equal{#1}{}}{{Part:}}{{Part} {\textcolor{Black}{#1}}{:}}}}}}}
+\newcommand{\prob}[1]{\vspace{2\parskip}\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large\textcolor{Black}{#1}}{:}}}}}} \stepcounter{probCounter}}
+\newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}{:}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
 \newcommand{\isum}[1]{\sum_{#1}^\infty}
