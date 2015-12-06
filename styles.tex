@@ -32,10 +32,10 @@
 \usepackage{subfig}
 \usepackage{mathdots}
 
-\DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}   
+%\DeclareMathAlphabet{\mathbbold}{U}{bbold}{m}{n}   
 %\DeclareMathAlphabet{\mathbbm}{U}{bbm}{m}{n}
 \usepackage{bbm}
-\usepackage{dsfont}
+%\usepackage{dsfont}
 
 \usepackage[e]{esvect}
 \usepackage[makeroom]{cancel}
@@ -129,7 +129,7 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \theoremstyle{plain}
 %\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\itshape}
-\theoremseparator{:}
+\theoremseparator{.}
 
 \newtheorem{ptheorem}{Theorem}[probCounter]
 \newtheorem{theorem}{Theorem}
@@ -143,15 +143,15 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \theoremstyle{plain}
 %\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
-\theoremseparator{:}
+\theoremseparator{.}
 
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{pclaim}{Claim}[probCounter]
 
 \theoremstyle{plain}
-\theoremheaderfont{\normalfont\sffamily\bfseries}
+%\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
-\theoremseparator{:}
+\theoremseparator{.}
 
 \newtheorem{pdefn}{Definition}[probCounter]
 \newtheorem{defn}[theorem]{Definition}
@@ -164,9 +164,7 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \theoremstyle{nonumberplain}
 %\theoremstyle{plain}
 \theoremsymbol{} 
-\theoremseparator{:}
 \newtheorem{rmk}{Remark}
-\theoremseparator{.}
 \newtheorem{hint}{Hint}
 \newtheorem{eg}{Example}
 \newtheorem{fct}{Fact}
@@ -174,19 +172,16 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 %\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremstyle{nonumberplain}
-\theoremseparator{.} 
 \theoremsymbol{\rule{1ex}{2ex}} 
 \newtheorem{proof}{Proof}
 
 %\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape} 
 \theoremsymbol{}
-\theoremseparator{:} 
 \newtheorem{solution}{Solution}
 
 %\theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\upshape}
-\theoremseparator{:}
 \theoremstyle{nonumberplain}
 \newtheorem{clm}{Claim}
 \theorembodyfont{\itshape}
@@ -321,6 +316,7 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 \DeclareMathOperator{\diam}{\ensuremath{diam}}
 \DeclareMathOperator{\Sub}{\ensuremath{Sub}}
 \DeclareMathOperator{\Lin}{\ensuremath{Lin}}
+\DeclareMathOperator{\Mat}{\ensuremath{Mat}}
 \DeclareMathOperator{\Hom}{\ensuremath{Hom}}
 \DeclareMathOperator{\diag}{\ensuremath{diag}}
 \DeclareMathOperator{\End}{\ensuremath{End}}
@@ -432,9 +428,9 @@ rpoint/.style={circle, inner sep=0pt, minimum size=4pt, fill=red, draw},%
 
 \usepackage{centernot}
 
-\newcommand{\parte}[1]{\vspace{2\parskip}\noindent{\color{Cerulean}\textbf{{{\ifthenelse{\equal{#1}{}}{{Part:}}{{Part} {\textcolor{Black}{#1}}{:}}}}}}}
-\newcommand{\prob}[1]{\vspace{2\parskip}\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large\textcolor{Black}{#1}}{:}}}}}} \stepcounter{probCounter}}
-\newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}{:}}}}}}}
+\newcommand{\parte}[1]{\vspace{2\parskip}\noindent{\color{Cerulean}\textbf{{{\ifthenelse{\equal{#1}{}}{{Part:}}{{Part} {\textcolor{Black}{#1}}{.}}}}}}}
+\newcommand{\prob}[1]{\vspace{2\parskip}\noindent{\color{BrickRed}\textbf{{{\ifthenelse{\equal{#1}{}}{{Problem:}}{{Problem} {\large\textcolor{Black}{#1}}{.}}}}}} \stepcounter{probCounter}}
+\newcommand{\soln}[1]{\noindent{\textbf{{{\ifthenelse{\equal{#1}{}}{{{Solution:}}}{{{Solution}} {\large \textcolor{Black}{#1}}{.}}}}}}}
 \newcommand{\varnmid}{\centernot\mid}
 \newcommand{\iprod}[1]{\prod_{#1}^\infty}
 \newcommand{\isum}[1]{\sum_{#1}^\infty}
@@ -467,18 +463,18 @@ This page is intentionally left blank.%
 }
 
 %% == Single letter loading
-\DeclareFontFamily{U}{MnSymbolC}{}
-\DeclareFontShape{U}{MnSymbolC}{m}{n}{
-<-6> MnSymbolC5
-<6-7> MnSymbolC6
-<7-8> MnSymbolC7
-<8-9> MnSymbolC8
-<9-10> MnSymbolC9
-<10-12> MnSymbolC10
-<12-> MnSymbolC12}{}
-\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
-\DeclareMathSymbol{\powerset}{\mathop}{mnsymbols}{180}
-\DeclareMathSymbol{\varinfty}{\mathop}{mnsymbols}{170}
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%<-6> MnSymbolC5
+%<6-7> MnSymbolC6
+%<7-8> MnSymbolC7
+%<8-9> MnSymbolC8
+%<9-10> MnSymbolC9
+%<10-12> MnSymbolC10
+%<12-> MnSymbolC12}{}
+%\DeclareSymbolFont{mnsymbols}{U}{MnSymbolC}{m}{n}
+%\DeclareMathSymbol{\powerset}{\mathop}{mnsymbols}{180}
+%\DeclareMathSymbol{\varinfty}{\mathop}{mnsymbols}{170}
 
 %
 %\DeclareFontFamily{U}{MnSymbolA}{}
@@ -520,6 +516,8 @@ This page is intentionally left blank.%
 %}
 %\def\approxprop{\mathpalette\app\relax}
 
+\newcommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+
 \def\Xint#1{\ \ \mathchoice
       {\XXint\displaystyle\textstyle{#1}}%
       {\XXint\textstyle\scriptstyle{#1}}%
@@ -528,5 +526,5 @@ This page is intentionally left blank.%
       \ \iiint}
    \def\XXint#1#2#3{{\setbox0=\hbox{$#1{\ \ \ #2#3}{\iiint}$}
         \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
-\newcommand{\odc}{\subset\supset}
+\newcommand{\odc}{\subset\!\supset}
 \newcommand{\oiiint}{\Xint{\odc}}
