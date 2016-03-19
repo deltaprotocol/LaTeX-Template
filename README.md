@@ -1,5 +1,6 @@
 LaTeX
 =====
+* 2016/03/19 Added new ops
 * 2015/06/14 Added rank operator, and change \Null to \nul.
 * 2015/05/26 Decreases spaces used in \section and \subsection command.
 * 2015/03/27 General update, added new script font.
